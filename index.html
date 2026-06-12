@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>career_coachij — Study Abroad & Recruitment Hub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="wrap">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" onclick="showHome(event)">career_coachij<span>.</span></a>
+      <button class="nav-home-btn" id="nav-back-btn" style="display:none" onclick="showHome(event)">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to Home
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="view active" id="view-home">
+
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="wrap">
+      <div class="hero-content">
+        <div class="eyebrow">Study Abroad &amp; Career Migration Experts</div>
+        <h1 class="hero-h">Your future is<br><em>global.</em><br>We'll get you there.</h1>
+        <p class="hero-sub">Personalised university admissions, healthcare recruitment, and career migration guidance — from Kerala to Europe and beyond.</p>
+        <div class="hero-ctas">
+          <button class="btn-primary" onclick="scrollToHub()">
+            Explore Our Services
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1 6.5h11M6.5 1l5.5 5.5-5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="btn-ghost" onclick="showView('view-form2')">Free Webinar Registration</button>
+        </div>
+        <div class="trust-row reveal">
+          <div class="trust-stat"><strong>11 Yrs</strong><span>Migration expertise</span></div>
+          <div class="trust-stat"><strong>AT + DE</strong><span>Public uni specialists</span></div>
+          <div class="trust-stat"><strong>Free</strong><span>First consultation</span></div>
+          <div class="trust-stat"><strong>800+</strong><span>Students guided</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="founder">
+    <div class="wrap">
+      <div class="founder-grid">
+        <div class="portrait-wrap reveal">
+          <div class="portrait-inner">
+            <img src="founder.jpg" alt="Irshan Jaffer" class="founder-portrait-img">
+          </div>
+        </div>
+        <div class="reveal">
+          <p class="founder-eyebrow">Meet the Founder</p>
+          <h2 class="founder-name">Irshan Jaffer</h2>
+          <p class="founder-cred">Certified Educational Consultant</p>
+          <p class="founder-bio">With over a decade spent guiding students and professionals through migration, career transitions, and European university admissions, Irshan combines lived experience with deep institutional knowledge of Austrian and German higher education systems.</p>
+          <div class="highlights">
+            <div class="hl-item">
+              <div class="hl-icon">🧭</div>
+              <div class="hl-text">11 Years of Career Stories, Migration &amp; Jobs<small>Deep, lived expertise across global pathways</small></div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-icon">🎓</div>
+              <div class="hl-text">Public University Admissions with Scholarships — 🇦🇹 Austria &amp; 🇩🇪 Germany<small>Specialist in high-quality, affordable European education</small></div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-icon">💬</div>
+              <div class="hl-text">Free Counselling Available<small>No commitment — just an honest conversation to start</small></div>
+            </div>
+          </div>
+          <div class="live-badge"><span class="badge-dot"></span>Free consultations open now</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hub">
+    <div class="wrap">
+      <p class="section-label reveal">Services &amp; Applications Hub</p>
+      <h2 class="section-h reveal">What brings you here?</h2>
+      <p class="section-sub reveal">Select a pathway below to open the relevant form or information.</p>
+      <div class="hub-grid">
+        <button class="hub-card" onclick="showView('view-form1')">
+          <div class="hub-emoji">🏥</div>
+          <div class="hub-title">Healthcare Recruitment</div>
+          <div class="hub-desc">Nurses, physios &amp; OT technicians seeking placements in Germany with language support.</div>
+          <div class="hub-arrow">Apply now <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M6 1l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </button>
+        <button class="hub-card" onclick="showView('view-form2')">
+          <div class="hub-emoji">🎙️</div>
+          <div class="hub-title">Free Webinar Registration</div>
+          <div class="hub-desc">Live session by a German resident on public universities, Chancenkarte &amp; Ausbildung.</div>
+          <div class="hub-arrow">Register free <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M6 1l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </button>
+        <button class="hub-card" onclick="showView('view-form3')">
+          <div class="hub-emoji">🇦🇹</div>
+          <div class="hub-title">Study in Austria</div>
+          <div class="hub-desc">1-on-1 information session to explore Austrian universities, programmes &amp; application timelines.</div>
+          <div class="hub-arrow">Book session <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M6 1l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </button>
+        <button class="hub-card accent" onclick="showView('view-form4')">
+          <div class="hub-emoji">🇩🇪</div>
+          <div class="hub-title">German Language Coaching</div>
+          <div class="hub-desc">Join our group led by a mentor with 12 years of Germany experience. Free access.</div>
+          <div class="hub-arrow">Join group <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6h10M6 1l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-logo">career_coachij.</div>
+          <p class="footer-sub">Study Abroad Consultancy · Kerala, India</p>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:irshanjaffer@gmail.com" class="foot-link">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="3" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1.5 4L7 8l5.5-4" stroke="currentColor" stroke-width="1.2"/></svg>
+            irshanjaffer@gmail.com
+          </a>
+          <a href="https://wa.me/09148979070" class="foot-link" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1C3.69 1 1 3.69 1 7c0 1.07.28 2.08.79 2.95L1 13l3.14-.77A5.97 5.97 0 007 13c3.31 0 6-2.69 6-6S10.31 1 7 1z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+      <div class="footer-copy">© Education Consultancy. All rights reserved.</div>
+    </div>
+  </footer>
+
+</div><div class="view" id="view-form1">
+  <div class="wrap form-view">
+    <button class="form-back" onclick="showHome()">
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M9 2L4 6.5 9 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Back to Home
+    </button>
+    <div class="form-header">
+      <p class="form-kicker">Healthcare Pathway · Germany</p>
+      <h1 class="form-title">International Healthcare Professional<br>Recruitment Application</h1>
+      <p class="form-subtitle">For qualified nurses, physiotherapists, and OT technicians seeking professional placement opportunities in Germany.</p>
+    </div>
+    <div class="form-card" id="f1-card">
+      <div class="success-state" id="f1-success">
+        <div class="success-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5 9-9" stroke="#1A365D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Application Received</h3>
+        <p>Thank you for applying. Our recruitment team will review your profile and reach out within 3 working days.</p>
+        <button class="btn-ghost" style="margin-top:.5rem" onclick="resetForm('f1','f1-success','f1-card')">Submit another</button>
+      </div>
+      <form id="f1" action="/api/healthcare" method="POST" novalidate>
+        <div class="field-group">
+
+          <p class="form-section-title">Personal Information</p>
+          <div class="field-row cols-2">
+            <div class="field" data-field>
+              <label for="f1-name">Full Name</label>
+              <input type="text" id="f1-name" name="name" placeholder="e.g. Aisha Nair" required>
+              <span class="err-msg">Please enter your full name</span>
+            </div>
+            <div class="field" data-field>
+              <label for="f1-email">Email Address</label>
+              <input type="email" id="f1-email" name="email" placeholder="you@email.com" required>
+              <span class="err-msg">Please enter a valid email</span>
+            </div>
+          </div>
+          <div class="field-row cols-2">
+            <div class="field" data-field>
+              <label for="f1-mobile">Mobile Number</label>
+              <input type="tel" id="f1-mobile" name="mobile" placeholder="+91 98765 43210" required>
+              <span class="err-msg">Please enter your mobile number</span>
+            </div>
+            <div class="field" data-field>
+              <label for="f1-country">Current Country of Residence</label>
+              <input type="text" id="f1-country" name="country" placeholder="e.g. India" required>
+              <span class="err-msg">Please enter your current country</span>
+            </div>
+          </div>
+
+          <hr class="form-divider">
+          <p class="form-section-title">Professional Profile</p>
+
+          <div class="field" data-field>
+            <label for="f1-position">Position Applied For</label>
+            <select id="f1-position" name="position" required>
+              <option value="">Select a position…</option>
+              <option value="nursing-gnm">Nursing — GNM (General Nursing &amp; Midwifery)</option>
+              <option value="nursing-bsc">Nursing — BSc Nursing</option>
+              <option value="physio">Physiotherapist</option>
+              <option value="ot-tech">Operation Theater Technician</option>
+            </select>
+            <span class="err-msg">Please select a position</span>
+          </div>
+
+          <div class="field-row cols-2">
+            <div class="field" data-field>
+              <label for="f1-qual">Highest Qualification</label>
+              <input type="text" id="f1-qual" name="qualification" placeholder="e.g. BSc Nursing, GNM" required>
+              <span class="err-msg">Please enter your qualification</span>
+            </div>
+            <div class="field" data-field>
+              <label for="f1-exp">Total Years of Experience</label>
+              <input type="number" id="f1-exp" name="experience" placeholder="e.g. 4" min="0" max="50" required>
+              <span class="err-msg">Please enter your experience</span>
+            </div>
+          </div>
+
+          <hr class="form-divider">
+          <p class="form-section-title">German Language</p>
+
+          <div class="field">
+            <label>B2 German Language Certificate Status</label>
+            <div class="radio-group">
+              <label class="radio-label"><input type="radio" name="b2_status" value="yes" class="radio-check-hidden"><span class="radio-pip"></span>Yes — I have a valid B2 certificate</label>
+              <label class="radio-label"><input type="radio" name="b2_status" value="studying" class="radio-check-hidden"><span class="radio-pip"></span>No — Currently studying towards B2</label>
+              <label class="radio-label"><input type="radio" name="b2_status" value="lower" class="radio-check-hidden"><span class="radio-pip"></span>No — My level is below B2 at this stage</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f1-issuer">Certificate Issuing Body <span style="font-weight:400;color:#aaa;font-size:.75em">(if applicable)</span></label>
+            <input type="text" id="f1-issuer" name="issuer" placeholder="e.g. Goethe-Institut, ÖSD, TestDaF">
+          </div>
+
+          <div class="field">
+            <label>Conversational Fluency in German</label>
+            <div class="slider-wrap">
+              <div class="slider-labels"><span>Beginner</span><span>Native-like</span></div>
+              <div class="slider-track">
+                <input type="range" id="f1-fluency" name="fluency" min="1" max="5" value="2" oninput="document.getElementById('f1-fluency-val').textContent=this.value">
+                <span class="slider-val" id="f1-fluency-val">2</span>
+              </div>
+              <div class="slider-labels"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+            </div>
+          </div>
+
+          <div class="field" data-field>
+            <label for="f1-statement">Statement of Interest in Working in Germany</label>
+            <textarea id="f1-statement" name="statement" placeholder="Tell us why you want to work in Germany and what motivates your application…" required></textarea>
+            <span class="err-msg">Please write a brief statement</span>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn-submit">
+              Submit Application
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <p class="form-note">Your details are handled with complete confidentiality. We'll be in touch within 3 working days.</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div><div class="view" id="view-form2">
+  <div class="wrap form-view">
+    <button class="form-back" onclick="showHome()">
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M9 2L4 6.5 9 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Back to Home
+    </button>
+    <div class="form-header">
+      <p class="form-kicker">Free Event · Live Session</p>
+      <h1 class="form-title">Free Webinar by German Resident<br><span style="color:var(--navy)">Public Universities &amp; the Opportunity Card</span></h1>
+      <p class="form-subtitle">Register for our upcoming live webinar covering German public university admissions, the Chancenkarte (Opportunity Card), Ausbildung pathways, and nursing placements — hosted by someone who made the move themselves.</p>
+    </div>
+    <div class="form-card" id="f2-card">
+      <div class="success-state" id="f2-success">
+        <div class="success-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5 9-9" stroke="#1A365D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>You're Registered!</h3>
+        <p>We'll send your webinar joining link and reminder details to your email and WhatsApp.</p>
+        <button class="btn-ghost" style="margin-top:.5rem" onclick="resetForm('f2','f2-success','f2-card')">Register another person</button>
+      </div>
+      <form id="f2" action="/api/webinar" method="POST" novalidate>
+        <div class="field-group">
+
+          <p class="form-section-title">Your Details</p>
+          <div class="field-row cols-2">
+            <div class="field" data-field>
+              <label for="f2-name">Full Name <span class="req">*</span></label>
+              <input type="text" id="f2-name" name="name" placeholder="e.g. Rahul Menon" required>
+              <span class="err-msg">Full name is required</span>
+            </div>
+            <div class="field" data-field>
+              <label for="f2-email">Email Address <span class="req">*</span></label>
+              <input type="email" id="f2-email" name="email" placeholder="you@email.com" required>
+              <span class="err-msg">A valid email is required</span>
+            </div>
+          </div>
+          <div class="field" data-field>
+            <label for="f2-wa">WhatsApp Number <span class="req">*</span></label>
+            <input type="tel" id="f2-wa" name="whatsapp" placeholder="+91 98765 43210" required>
+            <span class="err-msg">WhatsApp number is required</span>
+          </div>
+
+          <hr class="form-divider">
+          <p class="form-section-title">Academic &amp; Interest Profile</p>
+
+          <div class="field" data-field>
+            <label for="f2-interest">Primary Interest <span class="req">*</span></label>
+            <select id="f2-interest" name="interest" required>
+              <option value="">Select your primary interest…</option>
+              <option value="german-uni">German Public University Admissions</option>
+              <option value="chancenkarte">Chancenkarte (Opportunity Card)</option>
+              <option value="ausbildung">Ausbildung (Vocational Training)</option>
+              <option value="nursing">Nursing Placements in Germany</option>
+            </select>
+            <span class="err-msg">Please select your primary interest</span>
+          </div>
+
+          <div class="field" data-field>
+            <label>Highest Qualification <span class="req">*</span></label>
+            <div class="radio-group">
+              <label class="radio-label"><input type="radio" name="qualification" value="school" class="radio-check-hidden" required><span class="radio-pip"></span>Higher Secondary / 12th Grade</label>
+              <label class="radio-label"><input type="radio" name="qualification" value="diploma" class="radio-check-hidden"><span class="radio-pip"></span>Diploma / Polytechnic</label>
+              <label class="radio-label"><input type="radio" name="qualification" value="bachelors" class="radio-check-hidden"><span class="radio-pip"></span>Bachelor's Degree</label>
+              <label class="radio-label"><input type="radio" name="qualification" value="masters" class="radio-check-hidden"><span class="radio-pip"></span>Master's / Postgraduate Degree</label>
+            </div>
+            <span class="err-msg" id="f2-qual-err" style="display:none">Please select your qualification</span>
+          </div>
+
+          <div class="field" data-field>
+            <label>German Language Test Status <span class="req">*</span></label>
+            <div class="radio-group">
+              <label class="radio-label"><input type="radio" name="german_status" value="cert" class="radio-check-hidden" required><span class="radio-pip"></span>Yes — I have a certificate (A1–C2)</label>
+              <label class="radio-label"><input type="radio" name="german_status" value="learning" class="radio-check-hidden" required><span class="radio-pip"></span>No — I am currently learning German</label>
+              <label class="radio-label"><input type="radio" name="german_status" value="english" class="radio-check-hidden" required><span class="radio-pip"></span>No — I plan to study in English only</label>
+            </div>
+            <span class="err-msg" id="f2-german-err" style="display:none">Please select your language status</span>
+          </div>
+
+          <div class="field-row cols-2">
+            <div class="field" data-field>
+              <label for="f2-timeline">Target Start Timeline <span class="req">*</span></label>
+              <select id="f2-timeline" name="timeline" required>
+                <option value="">When do you plan to start?</option>
+                <option value="asap">As soon as possible</option>
+                <option value="6m">Within 6 months</option>
+                <option value="1yr">Within 1 year</option>
+                <option value="2yr">In 1–2 years</option>
+                <option value="exploring">Just exploring for now</option>
+              </select>
+              <span class="err-msg">Please select a timeline</span>
+            </div>
+            <div class="field" data-field>
+              <label for="f2-field">Target Field of Study <span class="req">*</span></label>
+              <input type="text" id="f2-field" name="field_of_study" placeholder="e.g. Mechanical Engineering, Nursing" required>
+              <span class="err-msg">Please enter your field of study</span>
+            </div>
+          </div>
+
+          <div class="field" data-field>
+            <label for="f2-ielts">IELTS / English Test Score Status <span class="req">*</span></label>
+            <select id="f2-ielts" name="ielts_status" required>
+              <option value="">Select status…</option>
+              <option value="have">I have a valid IELTS / TOEFL score</option>
+              <option value="booked">I have a test booked</option>
+              <option value="planning">Planning to take the test soon</option>
+              <option value="na">Not applicable — German-medium pathway</option>
+            </select>
+            <span class="err-msg">Please select your IELTS status</span>
+          </div>
+
+          <div class="field" data-field>
+            <label for="f2-source">How did you hear about us? <span class="req">*</span></label>
+            <select id="f2-source" name="source" required>
+              <option value="">Select a source…</option>
+              <option value="instagram">Instagram</option>
+              <option value="friend">Friend or Family Referral</option>
+              <option value="social">Other Social Media</option>
+              <option value="search">Google / Search Engine</option>
+              <option value="other">Other</option>
+            </select>
+            <span class="err-msg">Please let us know how you found us</span>
+          </div>
+
+          <div class="field">
+            <label>Consultation Urgency <span class="req">*</span></label>
+            <div class="slider-wrap">
+              <div class="slider-labels"><span>No rush</span><span>Very urgent</span></div>
+              <div class="slider-track">
+                <input type="range" id="f2-urgency" name="urgency" min="1" max="5" value="3" oninput="document.getElementById('f2-urgency-val').textContent=this.value">
+                <span class="slider-val" id="f2-urgency-val">3</span>
+              </div>
+              <div class="slider-labels"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+            </div>
+          </div>
+
+          <hr class="form-divider">
+          <p class="form-section-title">Group Confirmations</p>
+
+          <div class="ext-check-wrap">
+            <p style="font-size:.8rem;color:var(--ink-soft);margin-bottom:.75rem">Please confirm you've joined our supporting groups to receive updates and resources.</p>
+            <div class="check-group">
+              <label class="check-label"><input type="checkbox" id="f2-webinar-group" name="joined_webinar_group" class="radio-check-hidden"><span class="check-box"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>I have joined the Webinar Confirmation Group</label>
+              <a href="https://shorturl.at/WwoPR" target="_blank" rel="noopener" class="ext-check-link" style="margin-left:2.5rem">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M5 1H2a1 1 0 00-1 1v8a1 1 0 001 1h8a1 1 0 001-1V8M8 1h3m0 0v3m0-3L4.5 7.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Open Webinar Group →
+              </a>
+              <label class="check-label"><input type="checkbox" id="f2-lang-group" name="joined_lang_group" class="radio-check-hidden"><span class="check-box"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>I have joined the German Language Learning Group</label>
+            </div>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn-submit">
+              Register for Free Webinar
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <p class="form-note">This webinar is completely free. Your joining link will be sent via email and WhatsApp before the event.</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div><div class="view" id="view-form3">
+  <div class="wrap form-view">
+    <button class="form-back" onclick="showHome()">
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M9 2L4 6.5 9 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Back to Home
+    </button>
+    <div class="form-header">
+      <p class="form-kicker">🇦🇹 Austria Pathway</p>
+      <h1 class="form-title">Study in Austria:<br>1:1 Information Session Request</h1>
+      <p class="form-subtitle">Schedule a personalised consultation to explore Austrian public universities, language requirements, scholarship opportunities, and application timelines.</p>
+    </div>
+    <div class="form-card" id="f3-card">
+      <div class="success-state" id="f3-success">
+        <div class="success-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5 9-9" stroke="#1A365D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Session Request Sent</h3>
+        <p>We'll confirm your 1:1 session slot — or send you detailed Austria information — within 48 hours.</p>
+        <button class="btn-ghost" style="margin-top:.5rem" onclick="resetForm('f3','f3-success','f3-card')">Submit another request</button>
+      </div>
+      <form id="f3" action="/api/austria" method="POST" novalidate>
+        <div class="field-group">
+
+          <p class="form-section-title">Your Details</p>
+          <div class="field-row cols-2">
+            <div class="field" data-field>
+              <label for="f3-name">Full Name</label>
+              <input type="text" id="f3-name" name="name" placeholder="e.g. Priya Krishnan" required>
+              <span class="err-msg">Please enter your full name</span>
+            </div>
+            <div class="field" data-field>
+              <label for="f3-email">Email Address</label>
+              <input type="email" id="f3-email" name="email" placeholder="you@email.com" required>
+              <span class="err-msg">Please enter a valid email</span>
+            </div>
+          </div>
+          <div class="field-row cols-2">
+            <div class="field" data-field>
+              <label for="f3-phone">Phone Number</label>
+              <input type="tel" id="f3-phone" name="phone" placeholder="+91 98765 43210" required>
+              <span class="err-msg">Please enter your phone number</span>
+            </div>
+            <div class="field" data-field>
+              <label for="f3-edu">Highest Education Completed</label>
+              <input type="text" id="f3-edu" name="education" placeholder="e.g. BSc Computer Science" required>
+              <span class="err-msg">Please enter your education</span>
+            </div>
+          </div>
+          <div class="field" data-field>
+            <label for="f3-foi">Field of Interest</label>
+            <input type="text" id="f3-foi" name="field_of_interest" placeholder="e.g. Environmental Engineering, Business" required>
+            <span class="err-msg">Please enter your field of interest</span>
+          </div>
+
+          <hr class="form-divider">
+          <p class="form-section-title">Study Preferences</p>
+
+          <div class="field">
+            <label>Target Study Level</label>
+            <div class="radio-group">
+              <label class="radio-label"><input type="radio" name="study_level" value="bachelors" class="radio-check-hidden" required><span class="radio-pip"></span>Bachelor's Degree</label>
+              <label class="radio-label"><input type="radio" name="study_level" value="masters" class="radio-check-hidden" required><span class="radio-pip"></span>Master's Degree</label>
+              <label class="radio-label"><input type="radio" name="study_level" value="phd" class="radio-check-hidden" required><span class="radio-pip"></span>PhD / Doctorate</label>
+              <label class="radio-label"><input type="radio" name="study_level" value="shortcourse" class="radio-check-hidden" required><span class="radio-pip"></span>Short-term Course / Certificate</label>
+              <label class="radio-label"><input type="radio" name="study_level" value="language" class="radio-check-hidden" required><span class="radio-pip"></span>Language Course</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f3-start">Target Start Date</label>
+            <input type="date" id="f3-start" name="start_date">
+          </div>
+
+          <hr class="form-divider">
+          <p class="form-section-title">Consultation Preference</p>
+
+          <div class="field">
+            <label>Would you like to schedule a 1:1 session?</label>
+            <div class="radio-group">
+              <label class="radio-label"><input type="radio" name="schedule_session" value="yes" class="radio-check-hidden" required><span class="radio-pip"></span>Yes — please schedule a 1:1 session with me</label>
+              <label class="radio-label"><input type="radio" name="schedule_session" value="no" class="radio-check-hidden" required><span class="radio-pip"></span>No — just send me information by email</label>
+            </div>
+          </div>
+
+          <div class="field" id="f3-avail-wrap">
+            <label>Availability for 1:1 Session <span style="font-weight:400;color:#aaa;font-size:.75em">(select all that apply)</span></label>
+            <div class="check-group">
+              <label class="check-label"><input type="checkbox" name="availability" value="weekday-am" class="radio-check-hidden"><span class="check-box"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Weekday Mornings (9am – 12pm)</label>
+              <label class="check-label"><input type="checkbox" name="availability" value="weekday-pm" class="radio-check-hidden"><span class="check-box"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Weekday Afternoons (12pm – 5pm)</label>
+              <label class="check-label"><input type="checkbox" name="availability" value="evenings" class="radio-check-hidden"><span class="check-box"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Evenings (after 6pm)</label>
+              <label class="check-label"><input type="checkbox" name="availability" value="weekends" class="radio-check-hidden"><span class="check-box"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Weekends</label>
+            </div>
+          </div>
+
+          <hr class="form-divider">
+          <p class="form-section-title">Community</p>
+          <div class="ext-check-wrap">
+            <div class="check-group">
+              <label class="check-label"><input type="checkbox" id="f3-wa-group" name="join_whatsapp_group" class="radio-check-hidden"><span class="check-box"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>I want to join the Austria Information WhatsApp Group</label>
+            </div>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn-submit">
+              Submit Request
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <p class="form-note">All information shared is strictly confidential. We'll respond within 48 hours.</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div><div class="view" id="view-form4">
+  <div class="wrap form-view">
+    <button class="form-back" onclick="showHome()">
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M9 2L4 6.5 9 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Back to Home
+    </button>
+    <div class="form-header">
+      <p class="form-kicker">🇩🇪 Language Coaching</p>
+      <h1 class="form-title">German Language<br>Coaching Group</h1>
+      <p class="form-subtitle">Free access to a structured, community-driven German learning group led by an experienced mentor.</p>
+    </div>
+    <div class="wa-card">
+      <p class="wa-kicker">Direct Group Access</p>
+      <h2 class="wa-title">Learn German with Someone Who Lived It</h2>
+      <p class="wa-desc">Join our free WhatsApp coaching group led by a language mentor with 12 years of personal and professional experience living and working in Germany. Get structured lessons, vocabulary drills, grammar support, and real-world context — from someone who's been there.</p>
+      <div class="wa-highlights">
+        <div class="wa-hl">Mentor with 12 years of Germany experience</div>
+        <div class="wa-hl">Structured daily lessons via WhatsApp</div>
+        <div class="wa-hl">Grammar, vocabulary, and exam preparation</div>
+        <div class="wa-hl">Community of motivated learners like you</div>
+        <div class="wa-hl">Completely free — no fees, no strings</div>
+      </div>
+      <a href="https://chat.whatsapp.com/FetfLyQv1mJ6Ne0ImN7ORX?mode=gi_t" target="_blank" rel="noopener" class="btn-wa">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 1C5.03 1 1 5.03 1 10c0 1.56.41 3.04 1.13 4.32L1 19l4.78-1.12A8.95 8.95 0 0010 19c4.97 0 9-4.03 9-9s-4.03-9-9-9z" fill="rgba(255,255,255,.2)" stroke="white" stroke-width="1.3" stroke-linejoin="round"/><path d="M7.5 7.5c0-.35.27-.64.63-.64s.63.29.63.64v.62c0 .7-.41 1.33-1.04 1.63A4.69 4.69 0 0012.5 13.38h.62c.35 0 .63.28.63.63s-.28.63-.63.63A5.63 5.63 0 017.5 9.37V7.5z" fill="white"/></svg>
+        Join the German Language Group
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</div><script src="script.js?v=2.0"></script>
+</body>
+</html>
